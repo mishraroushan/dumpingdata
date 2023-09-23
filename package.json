@@ -1,0 +1,26 @@
+{
+  "name": "dumpingdata",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.9",
+    "autoprefixer": "10.4.15",
+    "axios": "^1.5.0",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "next": "^13.5.2",
+    "postcss": "8.4.29",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3"
+  }
+}
