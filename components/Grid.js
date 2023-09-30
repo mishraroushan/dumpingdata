@@ -10,7 +10,7 @@ export default function Grid(props) {
         <div className="p-2 bg-orange-400">
           <div className="text-xs">
             <TablePagination
-              rowsPerPageOptions={[10, 20, 30, 40]}
+              rowsPerPageOptions={[]}
               component="div"
               count={props.totalCount}
               rowsPerPage={props.limit}
@@ -35,13 +35,13 @@ export default function Grid(props) {
                 </tr>
               </thead>
               <tbody>
-                {rows.map((row) => (
-                  <tr className="even:bg-white odd:bg-gray-300" key={row}>
-                    {row.map((item) => (
+                {rows.map((row,index) => ( 
+                  <tr className="even:bg-white odd:bg-gray-300" key={index}>
+                    {row.map((item,index) => (
                       <td
                         className="px-4 py-2 border border-black"
                         scope="col"
-                        key={item}
+                        key={index}
                       >
                         {item}
                       </td>
