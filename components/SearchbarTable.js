@@ -1,10 +1,12 @@
-'use client'
+"use client";
 import Searchbar from "./Searchbar";
 import Grid from "./Grid";
 import Loader from "./Loader";
-import { useState,useCallback,useEffect } from "react";
-import axios from "axios";
+import { useState, useCallback, useEffect } from "react";
 import NoDataFound from "./NoDataFound";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
 const ImportDataHeading = [
   {
     label: "Date",
@@ -116,34 +118,30 @@ const ExportDataHeading = [
     label: "Port Of Loading",
     key: "PORT_OF_LOADING",
   },
- 
-  
- 
 ];
 
 export default function SearchbarTable() {
-  const [data,setData] = useState({
-    selectedTab:'?',
-     dropdownValue:'?',
-     searchValue:'?', 
-  })
+  const router = useRouter()
+  const [data, setData] = useState({
+    selectedTab: "",
+    dropdownValue: "",
+    searchValue: "",
+  });
   const sendData = (data) => {
-    setData(data)
-  }
-  const {selectedTab,dropdownValue,searchValue} = data
+    setData(data);
+  };
+  const { selectedTab, dropdownValue, searchValue } = data;
   const [rowsData, setRowsData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isData, setIsData] = useState(false);
-  const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(20);
+  const [page, setPage] = useState(0);
+  const limit = 20;
   const [totalCount, setTotalCount] = useState(0);
 
-  const formateRowsData = (data,selectedTab) => {
+  const formateRowsData = (data, selectedTab) => {
     const rowsArr = [];
     const grid_parameters =
-      selectedTab === 'import'
-        ? ImportDataHeading
-        : ExportDataHeading
+      selectedTab === "import" ? ImportDataHeading : ExportDataHeading;
     data.forEach((item) => {
       const data = [];
       grid_parameters.forEach(({ key }) => {
@@ -155,26 +153,25 @@ export default function SearchbarTable() {
   };
 
   const getGridData = useCallback(() => {
-    if (searchValue !== "") {
+    if (searchValue !== "" || searchValue.length > 4) {
       const dropdown = dropdownValue.toUpperCase();
       setIsLoading(true);
       axios
         .get(
-          `https://dump.dumpingdata.com/api/${selectedTab}/filter?${dropdown}=${searchValue}&limit=${limit}&page=${page}`
-        )
-        .then((data) => {
-          if (data.data.data.length > 0) {
+          `https://dump.dumpingdata.com/api/${selectedTab}/filter?${dropdown}=${searchValue}&limit=${limit}&page=${page+1}`)
+        .then((res) => {
+          if (res.data.data.length > 0) {
             setIsData(true);
-            formateRowsData(data.data.data, selectedTab);
-            setTotalCount(data.data.count);
+            formateRowsData(res.data.data, selectedTab);
+            setTotalCount(res.data.count);
           }
         })
-        .catch((err) => console.log(err))
+        .catch(() => setIsData(false))
         .finally(() => {
           setIsLoading(false);
         });
     }
-  }, [dropdownValue, limit, page, searchValue, selectedTab]);
+  }, [dropdownValue, page, searchValue, selectedTab]);
 
   const Search = () => {
     getGridData();
@@ -182,23 +179,20 @@ export default function SearchbarTable() {
 
   useEffect(() => {
     getGridData();
-  }, [page, limit, getGridData]);
+  }, [page,getGridData]);
 
-  const handlePageChange = (event, page) => {
-    setPage(page);
+  const handlePageChange = () => {
+    router.push('/contact')
   };
-  const handleLimitChange = (event) => {
-    setLimit(event.target.value);
-  };
- 
+
   return (
     <>
       <Searchbar Search={Search} sendData={sendData} />
       <div>
-        {searchValue === "" || searchValue.length < 3 ? null : isLoading ? (
+        {searchValue === "" || searchValue.length < 4 ? null : isLoading ? (
           <Loader />
         ) : (
-          <Grid 
+          <Grid
             rows={rowsData}
             headerData={
               selectedTab === "import" ? ImportDataHeading : ExportDataHeading
@@ -208,7 +202,6 @@ export default function SearchbarTable() {
             totalCount={totalCount}
             limit={limit}
             handlePageChange={handlePageChange}
-            handleLimitChange={handleLimitChange}
           />
         )}
       </div>
