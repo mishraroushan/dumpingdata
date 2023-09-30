@@ -10,7 +10,7 @@ export default function Grid(props) {
         <div className="p-2 bg-orange-400">
           <div className="text-xs">
             <TablePagination
-              rowsPerPageOptions={[10, 20]}
+              rowsPerPageOptions={[10, 20, 30, 40]}
               component="div"
               count={props.totalCount}
               rowsPerPage={props.limit}
