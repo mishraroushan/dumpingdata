@@ -93,4 +93,3 @@ export default function Searchbar(props) {
     </div>
   );
 }
-}
