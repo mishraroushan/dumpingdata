@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Blogs() {
   return (
-    <div>
+    <div >
       <p className="font-serif text-black bg-orange-400 p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl">
         Blogs
       </p>
