@@ -5,8 +5,8 @@ import { useState } from "react";
 export default function About() {
   const [read, setRead] = useState(false);
   return (
-    <div>
-      <p className="font-serif text-black bg-orange-400 p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl">
+    <div style={{ backgroundImage: 'url("contact-bg.jpg")' }}>
+      <p className="font-serif text-black p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl md:py-20 bg-center "style={{ backgroundImage: 'url("about.webp")',}}>
         About Us
       </p>
       <div>
@@ -122,3 +122,4 @@ export default function About() {
     </div>
   );
 }
+
