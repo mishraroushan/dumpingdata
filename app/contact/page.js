@@ -22,7 +22,7 @@ export default function Contact() {
   };
   return (
     <div>
-      <p className="font-serif text-white p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl bg-cover md:py-20 "style={{ backgroundImage: 'url("contact-us.jpg")',}}>
+      <p className="font-serif text-white p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl bg-cover md:py-20 "style={{ backgroundImage: 'url("Contact-us.jpg")'}}>
         Contact Us
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:px-20 xl:px-40 py-10 gap-2 " style={{ backgroundImage: 'url("contact-bg.jpg")' }}>
