@@ -171,6 +171,11 @@ export const Benefits = [
     description:
       "Our team of data experts is dedicated to assisting you throughout your journey. Whether you have data-related queries, need guidance on data interpretation, or seek insights into specific markets, we are here to help.",
   },
+    {
+    title: "Encryption ",
+    description:
+      "Encryption scrambles data so that it is unreadable to unauthorized users, even if it is intercepted.",
+  },
   {
     title: "Data Security and Confidentiality ",
     description:
