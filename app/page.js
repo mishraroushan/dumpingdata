@@ -172,96 +172,101 @@ export default function Home() {
       <p className="font-serif text-black bg-orange-400 p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl ">
         Share Your Requirements With Us To Serve Your Better.
       </p>
-      <div className="bg-white">
-        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <Script src='https://smtpjs.com/v3/smtp.js'/>
-          <form onSubmit={sendEmail} className="space-y-8">
-            <div>
-              <label
-                htmlFor="email"
-                className="block mb-2 text-black  text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif"
-              >
-                Full Name:
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-lg  block w-full p-2 "
-                placeholder=""
-                required="required"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block mb-2 text-black  text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif"
-              >
-                Email ID:
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-lg block w-full p-2 "
-                placeholder=""
-                required="required"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block mb-2 text-black  text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif"
-              >
-                Mobile Number:
-              </label>
-              <input
-                type="tel"
-                id="tel"
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-lg block w-full p-2 "
-                placeholder=""
-                required="required"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="countries"
-                className="block mb-2 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif text-gray-900 "
-              >
-                Type of Data Required:
-              </label>
-              <select
-                id="data-type"
-                className="bg-gray-50 border border-gray-300 font-serif text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-lg block w-full p-2"
-              >
-                <option value="">Export Data</option>
-                <option value="IM">Import Data</option>
-                <option value="EI">Both</option>
-              </select>
-            </div>
-
-            <div className="sm:col-span-2">
-              <label
-                htmlFor="message"
-                className="block mb-2 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif text-gray-900"
-              >
-                Your Requirements:
-              </label>
-              <textarea
-                id="message"
-                rows={6}
-                className="block p-2.5 w-full text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl font-serif text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300"
-                placeholder=""
-                defaultValue={""}
-              />
-            </div>
-            <button
-              type="submit"
-              className="py-3 px-5   text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl font-serif text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 "
-            >
-              Send
-            </button>
-          </form>
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:px-20 xl:px-40 py-10 gap-2 " style={{ backgroundImage: 'url("contact-bg.jpg")' }}>
+        <div className="relative">
+          <img src="contact.jpg" className="w-full p-5 " />
         </div>
-      </div>
+        <div className=" relative">
+          <div className="p-4 mx-auto max-w-screen-sm">
+            <Script src="https://smtpjs.com/v3/smtp.js" />
+            <form onSubmit={sendEmail} className="space-y-8">
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-black  text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif"
+                >
+                  Full Name:
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-full  block w-full p-2 "
+                  placeholder=""
+                  required="required"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-black  text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif"
+                >
+                  Email ID:
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-full block w-full p-2 "
+                  placeholder=""
+                  required="required"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-black  text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif"
+                >
+                  Mobile Number:
+                </label>
+                <input
+                  type="tel"
+                  id="tel"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-full block w-full p-2 "
+                  placeholder=""
+                  required="required"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="countries"
+                  className="block mb-2 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif text-gray-900 "
+                >
+                  Type of Data Required:
+                </label>
+                <select
+                  id="data-type"
+                  className="bg-gray-50 border border-gray-200 font-serif text-gray-900 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl rounded-full block w-full p-2"
+                >
+                  <option value="">Export Data</option>
+                  <option value="IM">Import Data</option>
+                  <option value="EI">Both</option>
+                </select>
+              </div>
+
+              <div className="sm:col-span-2 rounded-full">
+                <label
+                  htmlFor="message"
+                  className="block mb-2 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-serif text-gray-900"
+                >
+                  Your Requirements:
+                </label>
+                <textarea
+                  id="message"
+                  rows={6}
+                  className="block p-2.5 w-full text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl font-serif text-gray-900 bg-gray-50 rounded-2xl shadow-sm border border-gray-300"
+                  placeholder=""
+                  defaultValue={""}
+                />
+              </div>
+              <button
+                type="submit"
+                className="py-3 px-5   text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl font-serif text-center text-white rounded-full bg-blue-700 w-full  hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div> 
     </div>
   );
 }
