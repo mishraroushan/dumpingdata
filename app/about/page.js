@@ -5,12 +5,12 @@ import { useState } from "react";
 export default function About() {
   const [read, setRead] = useState(false);
   return (
-    <div style={{ backgroundImage: 'url("contact-bg.jpg")' }}>
-      <p className="font-serif text-black p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl md:py-20 bg-center "style={{ backgroundImage: 'url("about.webp")',}}>
+    <div style={{ backgroundImage: 'url("about_bg.jpg")' }}>
+      <p className="font-serif text-orange-400 p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl md:py-20 bg-center "style={{ backgroundImage: 'url("contact-bg.jpg")',}}>
         About Us
       </p>
       <div>
-      <p className="text-black md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
+      <p className="text-white md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
         Welcome to Dumping Data. We are an online data selling platform that
         connects businesses with the data they need to make better decisions. We
         offer a wide variety of data products, including customer data, market
@@ -20,7 +20,7 @@ export default function About() {
         businesses to access the data they need. Our platform is easy to use,
         and we offer a variety of pricing options to fit your budget.
       </p>
-      <p className="text-black md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
+      <p className="text-white md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
         We are committed to protecting your privacy. We never share your data
         with third parties, and we only use your data for the purposes that you
         have authorized. In today&#39;s globalized economy, international trade has
@@ -30,7 +30,7 @@ export default function About() {
         the need for accurate, timely, and comprehensive data has never been
         more in crucial.
       </p>
-      <p className="text-black md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
+      <p className="text-white md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
         We collect, analyse and provide valuable insights into the movement of
         goods and services between nations. This data encompasses crucial
         information about imports and exports, such as product details,
@@ -42,7 +42,7 @@ export default function About() {
         opportunities, monitor competitors, and gauge international demand for
         their products or services.
       </p>
-      <p className="text-black md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
+      <p className="text-white md:mx-60 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl my-5 mx-4 text-justify font-serif">
         Our data-driven solutions go beyond mere statistics; we transform raw
         data into actionable intelligence. By leveraging cutting-edge
         technologies and analytics, we provide customized reports,
@@ -75,7 +75,7 @@ export default function About() {
           <p className="font-serif text-black bg-orange-400 p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl">
             Our Mission
           </p>
-          <p className="font-serif text-black  p-5 text-center text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+          <p className="font-serif text-white  p-5 text-center text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
             Our mission is to make data more accessible and affordable for
             businesses of all sizes. We believe that data can help businesses to
             make better decisions, improve their operations, and increase their
@@ -84,36 +84,36 @@ export default function About() {
           <p className="font-serif text-black bg-orange-400 p-5 text-center text-xl sm:text2xl md:text-3xl lg:text-4xl xl:text-5xl">
             Our Values
           </p>
-          <p className="font-serif text-black  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <p className="font-serif text-white  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Accuracy
           </p>
-          <p className="text-black md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
+          <p className="text-white md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
             We ensure that our data is accurate and up-to-date.
           </p>
-          <p className="font-serif text-black  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <p className="font-serif text-white  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Transparency
           </p>
-          <p className="text-black md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
+          <p className="text-white md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
             We are transparent about our pricing and our data collection
             practices.
           </p>
-          <p className="font-serif text-black  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <p className="font-serif text-white  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Privacy
           </p>
-          <p className="text-black md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
+          <p className="text-white md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
             We protect your privacy by never sharing your data with third
             parties.
           </p>
-          <p className="font-serif text-black  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <p className="font-serif text-white  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Security
           </p>
-          <p className="text-black md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
+          <p className="text-white md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
             We use the latest security measures to protect your data.
           </p>
-          <p className="font-serif text-black  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <p className="font-serif text-white  p-5 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Customer service:
           </p>
-          <p className="text-black md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
+          <p className="text-white md:mx-60 text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl my-5 mx-4  font-serif text-center">
             We offer excellent customer service to help you get the most out of
             our platform.
           </p>
@@ -122,4 +122,3 @@ export default function About() {
     </div>
   );
 }
-
