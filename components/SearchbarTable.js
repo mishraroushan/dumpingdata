@@ -158,7 +158,7 @@ export default function SearchbarTable() {
       setIsLoading(true);
       axios
         .get(
-          `https://dump.dumpingdata.com/api/${selectedTab}/filter?${dropdown}=${searchValue}&limit=${limit}&page=${page+1}`)
+          `https://my.dumpingdata.com/api/${selectedTab}/filter?${dropdown}=${searchValue}&limit=${limit}&page=${page+1}`)
         .then((res) => {
           if (res.data.data.length > 0) {
             setIsData(true);
